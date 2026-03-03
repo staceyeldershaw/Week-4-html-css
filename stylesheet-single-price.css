@@ -1,0 +1,129 @@
+:root {
+  --Teal-500: hsl(179, 62%, 43%);
+  --Teal-400: hsl(179, 47%, 52%);
+  --Green-400: hsl(71,73%, 54%);
+  --Teal-100:hsl(204, 43%, 93%);
+  --Gray-500: hsl(218, 22%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+body{font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--Teal-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 24px;
+}
+.card {
+    max-width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--White);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+ .top {
+      padding: 2.5rem;
+      line-height: 1.5;
+    }
+
+    .top h1 {
+      color: var(--Teal-500);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .top h2 {
+      color: var(--Green-400);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+.top p { 
+    color: var(--Gray-500);
+    line-height: 1.6;
+}
+.bottom { display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--Teal-500);
+    color: var(--White);
+}
+.subscription {
+    background-color: var(--Teal-500);
+    color: var(--White);
+    padding: 40px;
+}
+.subscription h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.price{
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.price span {
+    font-size: 32px;
+    color: var(--White);
+    font-weight: 700;
+}
+.price small {
+    font-size: 16px;
+    color: var(--White);
+    font-weight: 400;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+.subscription p {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    color: var(--White);
+    font-weight: 400;
+}
+.subscription button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--Green-400);
+    font-weight:700;
+    color: var(--White);
+    border:none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.subscription button:hover {
+    background-color: var(--White);
+    color: var(--Green-400);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.why-us {
+    background-color: var(--Teal-400);
+    color: var(--White);
+    padding: 2.5rem;
+    font-weight: 400;
+}
+.why-us h3 {
+    margin-bottom: 16px;
+}
+.why-us ul {
+    list-style: none;
+    line-height: 1.4;
+    opacity: 0.8;
+    font-size: 0.92rem;
+}
+/* Mobile */
+    @media (max-width: 600px) {
+      .bottom {
+        grid-template-columns: 1fr;
+      }
+    }
+
