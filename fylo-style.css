@@ -1,0 +1,218 @@
+:root {
+      --gradient-start: hsl(6, 100%, 80%);
+      --gradient-end: hsl(335, 100%, 65%);
+      --blue-200: hsl(243, 100%, 93%);
+      --grayish-blue: hsl(229, 7%, 55%);
+      --blue-850: hsl(228, 56%, 26%);
+      --blue-950: hsl(229, 57%, 11%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      background-color: var(--blue-950);
+      background-image: url("./images/bg-desktop.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100% 50%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: white;
+    }
+
+    /* Layout container */
+    .container {
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+      max-width: 920px;
+      width: 90%;
+    }
+
+    /* Left card */
+    .card-left {
+      background: var(--blue-850);
+      width: 350px;
+      padding: 40px;
+      border-radius: 10px 100px 10px 10px;
+    }
+
+    .logo img {
+      display: block;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .icon {
+      background: var(--blue-950);
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon img {
+      width: 22px;
+      height: auto;
+    }
+
+    /* Right card */
+    .card-right {
+      background: var(--blue-850);
+      flex: 1;
+      padding: 40px;
+      border-radius: 10px;
+      position: relative;
+      text-align: left;
+    }
+
+    .card-right p {
+      font-size: 14px;
+      color: var(--blue-200);
+      margin-bottom: 18px;
+    }
+
+    .card-right p span {
+      font-weight: 700;
+      color: white;
+    }
+
+    /* Progress bar */
+    .progress-bar {
+      background: var(--blue-950);
+      height: 20px;
+      border-radius: 20px;
+      padding: 3px;
+    }
+
+    .progress {
+      height: 100%;
+      width: 81.5%;
+      background: linear-gradient(
+        to right,
+        var(--gradient-start),
+        var(--gradient-end)
+      );
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .progress::after {
+      content: "";
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    /* Range labels */
+    .range {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-top: 8px;
+      font-weight: 700;
+      color: var(--blue-200);
+    }
+
+    /* Bubble showing storage left */
+    .bubble {
+      position: absolute;
+      top: -45px;
+      right: 40px;
+      background: white;
+      color: var(--blue-950);
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 32px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .bubble span {
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-left: 6px;
+      color: var(--grayish-blue);
+    }
+
+    .bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      border-width: 15px 15px 0 0;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+    }
+
+    /* Responsive - mobile */
+    @media (max-width: 768px) {
+      body {
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .card-left{
+        width:100%;
+      }
+
+      .card-right {
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .bubble {
+        position: static;
+        margin: 25px auto 0px;
+        display: inline-flex;
+      }
+
+      .bubble::after {
+        display: none;
+        margin-top: 50%;
+      }
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 20px;
+      color: var(--blue-200);
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+    }
